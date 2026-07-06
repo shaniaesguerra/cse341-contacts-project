@@ -14,7 +14,8 @@ const initDb = (callback) => {
     //otherwise connect to the db:
     MongoClient.connect(process.env.MONGO_URI)
         .then((client) => {
-            database = client.db();
+            //assign the right database to the variable:
+            database = client.db('project1'); 
             callback(null, database);
         })
         .catch((err) => {
