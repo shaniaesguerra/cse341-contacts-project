@@ -1,12 +1,13 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const mongodb = require('./data/db');
-
 const app = express();
+
 const port = process.env.PORT || 3000;
 
 //Middlewares
+app.use(bodyParser.json());
 app.use('/', require('./routes'));
-
 
 mongodb.initDb((err) => {
   if (err) {
