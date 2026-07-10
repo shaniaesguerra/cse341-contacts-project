@@ -25,8 +25,9 @@ Content-Type: application/json
     "firstName": "Ford",
     "lastName": "Manalo",
     "email": "ford.manalo@example.com",
-    "favoriteColor": "Blue",
+    "favoriteColor": "Black",
     "birthday": "1994-04-08"
-},
+}
 
 ### DELETE Contact
+DELETE http://localhost:3000/contacts/6a5035ef9034f0fbe4898d8d
